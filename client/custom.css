@@ -28,7 +28,8 @@ body {
   margin-left: 300px;
   margin-top: 65px;
   background: #ffffff;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .project-tree {
   width: 25%;
@@ -63,7 +64,7 @@ body {
 .cont1,
 .cont2,
 .cont3 {
-  width: 665px;
+  width: 650px;
   height: 300px;
   background-color: #c4c4c4;
   margin-left: 6px;
