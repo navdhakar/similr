@@ -24,7 +24,7 @@ body {
 
   position: absolute;
   width: 50%;
-  height: 650px;
+  height: 100%;
   margin-left: 300px;
   margin-top: 65px;
   background: #ffffff;
@@ -58,5 +58,13 @@ body {
   width: 300px;
   height: 50px;
   margin-left: 400px;
-  margin-top: -50px;
+  margin-top: -65px;
+}
+.cont1,
+.cont2,
+.cont3 {
+  width: 665px;
+  height: 300px;
+  background-color: #c4c4c4;
+  margin-left: 6px;
 }
