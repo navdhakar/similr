@@ -1,0 +1,56 @@
+/** @format */
+
+body {
+  /* Rectangle 1 */
+
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  background: #dbd9d9;
+}
+.nav {
+  /* Rectangle 2 */
+  margin-top: -8px;
+  margin-left: -8px;
+  position: absolute;
+  width: 100%;
+  height: 72px;
+
+  background: #8db92e;
+}
+.feed {
+  /* Rectangle 3 */
+
+  position: absolute;
+  width: 50%;
+  height: 650px;
+  margin-left: 300px;
+  margin-top: 65px;
+  background: #ffffff;
+  overflow: auto;
+}
+.project-tree {
+  width: 25%;
+  height: 100%;
+  background-color: #dbd9d9;
+  margin-top: 72px;
+}
+.people-suggestion {
+  width: 17%;
+  height: 100%;
+  background-color: #dbd9d9;
+  margin-left: 1100px;
+  margin-top: -615px;
+}
+.people1,
+.people2,
+.people3,
+.people4,
+.people5 {
+  width: 320px;
+  height: 75px;
+  background-color: #c4c4c4;
+  margin-left: -100px;
+  margin-top: 30px;
+}
