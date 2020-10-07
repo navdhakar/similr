@@ -1,0 +1,76 @@
+/** @format */
+
+body {
+  overflow: hidden;
+}
+
+.nav {
+  /* Rectangle 2 */
+  margin-top: -8px;
+  margin-left: -8px;
+  position: absolute;
+  width: 100%;
+  height: 72px;
+
+  background: #a1d335;
+  box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.container {
+  position: absolute;
+  width: 40%;
+  height: 100%;
+  margin-left: 385px;
+  margin-top: 65px;
+  background: #0cad27;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.5), -2px 0px 8px -1px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+#username {
+  width: 300px;
+  height: 50px;
+  margin-left: 110px;
+  margin-top: 30px;
+}
+#email {
+  width: 300px;
+  height: 50px;
+  margin-left: 110px;
+}
+#password {
+  width: 300px;
+  height: 50px;
+  margin-left: 110px;
+}
+#confirm {
+  width: 300px;
+  height: 50px;
+  margin-left: 110px;
+}
+
+.signup {
+  font-family: Saira Condensed;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  /* Rectangle 4 */
+  margin-top: 20px;
+  margin-left: 175px;
+  width: 173px;
+  height: 60px;
+  border: 0;
+  background: #3ada12;
+  border-radius: 5px;
+}
+button:hover {
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}
+#occupation {
+  color: #6e6e6e;
+  width: 319px;
+  height: 50px;
+  margin-left: 110px;
+  margin-top: 20px;
+}
