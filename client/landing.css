@@ -3,7 +3,6 @@
 body {
   background-color: #a1d335;
   overflow: hidden;
-  
 }
 
 #logoi {
@@ -55,7 +54,7 @@ body {
   box-shadow: -10px -10px 8px -10px #000000;
   border-radius: 5px;
 }
-}
+
 button:hover {
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
 }
