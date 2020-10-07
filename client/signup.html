@@ -15,20 +15,15 @@
     </div>
     <div class="container">
       <img src="logo.png" alt="_similar" width="200px" style="margin-top: 25px; margin-left: 165px" />
-      <div class="username">
-        <form>
-          <label for="username"></label><br />
-          <input type="text" id="username" name="search" placeholder="username" /><br />
-        </form>
-      </div>
-      <div class="email">
-        <form>
-          <label for="email"></label><br />
-          <input type="text" id="email" name="search" placeholder="email address" /><br />
-        </form>
-      </div>
-      <div class="type of work">
-        <label for="cars"></label>
+
+      <form>
+        <label for="username"></label><br />
+        <input type="text" id="username" name="username" placeholder="username" /><br />
+
+        <label for="email"></label><br />
+        <input type="text" id="email" name="email" placeholder="email address" /><br />
+
+        <label for="occupation"></label><br />
 
         <select name="occupation" id="occupation">
           <option value="programmer">programmer</option>
@@ -36,20 +31,15 @@
           <option value="developer">developer</option>
           <option value="reelancer">freelancer</option>
         </select>
-      </div>
-      <div class="password">
-        <form>
-          <label for="password"></label><br />
-          <input type="password" id="password" name="search" placeholder="password" /><br />
-        </form>
-      </div>
-      <div class="confirm">
-        <form>
-          <label for="confirm"></label><br />
-          <input type="password" id="confirm" name="search" placeholder="confirm" /><br />
-        </form>
-      </div>
-      <button type="button" class="signup">sign-up</button>
+
+        <label for="password"></label><br />
+        <input type="password" id="password" name="password" placeholder="password" /><br />
+
+        <label for="confirm"></label><br />
+        <input type="password" id="confirm" name="confirm" placeholder="confirm" /><br />
+        <button class="signup">sign-up</button>
+      </form>
     </div>
+    <script src="signup.js"></script>
   </body>
 </html>

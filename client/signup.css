@@ -76,5 +76,6 @@ button:hover {
   width: 319px;
   height: 50px;
   margin-left: 110px;
-  margin-top: 20px;
+  margin-top: 3px;
+  margin-bottom: 20px;
 }
