@@ -13,7 +13,7 @@ form.addEventListener('submit', (event) => {
   const password = formdata.get('password');
   const confirm = formdata.get('confirm');
   var occu = e.options[e.selectedIndex].value;
-  const userdata = {
+  const usercreds = {
     name: username,
     email: email,
     occupation: occu,
@@ -22,7 +22,7 @@ form.addEventListener('submit', (event) => {
   fetch(url, {
     method: 'POST', // *GET, POST, PUT, DELETE, etc.
     mode: 'cors',
-    body: JSON.stringify(userdata),
+    body: JSON.stringify(usercreds),
     // no-cors, *cors, same-origin
     cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
     credentials: 'same-origin', // include, *same-origin, omit
