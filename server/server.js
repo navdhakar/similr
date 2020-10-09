@@ -33,21 +33,23 @@ app.post('/', async (req, res) => {
 //       continue;
 //     }
 // }
-app.get('/', async (req, res) => {
-  const users_records = await usercreds.find();
-  res.json(users_records);
-});
 app.post('/login', async (req, res) => {
   const current_user = req.body;
+
   const user_records = await usercreds.find({ email: current_user.email }, 'password');
   // const some = current_user.password === users_records.docs.password;
   // console.log(some);
-  if (current_user.password === user_records[0].password && user_records != undefined) {
-    res.json('you are a verified user');
-    console.log('verified user looged in');
+  console.log(user_records[0].password);
+  if (user_records[0].password == undefined) {
+    console.log('user not found');
   } else {
-    res.json('you are an imposter');
-    console.log('unverified user');
+    if (current_user.password === user_records[0].password) {
+      res.json('you are a verified user');
+      console.log('verified user looged in');
+    } else {
+      res.json('wrong credential');
+      console.log('unverified user');
+    }
   }
 });
 
@@ -57,4 +59,4 @@ app.post('/login', async (req, res) => {
 //     res.json('you are a verified user');
 //   } else {
 //     res.json('you are an imposter');
-//   }
+//   } //!!do not ever code like this!! prior bad code example
