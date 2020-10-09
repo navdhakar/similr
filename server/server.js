@@ -2,23 +2,23 @@
 
 const express = require('express');
 const cors = require('cors');
-const app = express();
+const router = express();
 const monk = require('monk');
-app.use(cors());
-app.use(express.json());
+router.use(cors());
+router.use(express.json());
 const db = monk('localhost:27016/test');
 // db.options = {
 //   safe: true,
 //   castIds: false,
 // };//code to disable autocasting o id's;
 const usercreds = db.get('userd');
-app.use(cors());
-app.use(express.json());
-app.get('/', async (req, res) => {});
-app.listen(5000, () => {
+router.use(cors());
+router.use(express.json());
+router.get('/', async (req, res) => {});
+router.listen(5000, () => {
   console.log('dynamic server up and running port:5000');
 });
-app.post('/', async (req, res) => {
+router.post('/', async (req, res) => {
   const new_user_creds = await usercreds.insert(req.body);
   // const dat = await userdata.find();
   // console.log(dat);
@@ -33,13 +33,12 @@ app.post('/', async (req, res) => {
 //       continue;
 //     }
 // }
-app.post('/login', async (req, res) => {
+router.post('/login', async (req, res) => {
   const current_user = req.body;
 
   const user_records = await usercreds.find({ email: current_user.email }, 'password');
   // const some = current_user.password === users_records.docs.password;
   // console.log(some);
-  console.log(user_records[0].password);
   if (user_records[0].password == undefined) {
     console.log('user not found');
   } else {
