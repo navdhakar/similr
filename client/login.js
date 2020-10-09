@@ -2,7 +2,7 @@
 
 console.log('script2 loaded');
 const form = document.querySelector('form');
-const url = 'http://localhost:5000/login';
+const url = 'http://localhost:5004/login';
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   const formdata = new FormData(form);
@@ -26,5 +26,12 @@ form.addEventListener('submit', (event) => {
     // body data type must match "Content-Type" header
   })
     .then((res) => res.json())
-    .then((data) => console.log(data));
+    .then((data) => {
+      if (data === userlogindata.email) {
+        location.replace('http://127.0.0.1:5500/client/index.html');
+        sessionStorage.setItem('data', data);
+      } else {
+        console.log(data);
+      }
+    });
 });

@@ -15,10 +15,10 @@ const usercreds = db.get('userd');
 router.use(cors());
 router.use(express.json());
 router.get('/', async (req, res) => {});
-router.listen(5000, () => {
-  console.log('dynamic server up and running port:5000');
+router.listen(5004, () => {
+  console.log('dynamic server up and running port:5004');
 });
-router.post('/', async (req, res) => {
+router.post('/signup', async (req, res) => {
   const new_user_creds = await usercreds.insert(req.body);
   // const dat = await userdata.find();
   // console.log(dat);
@@ -43,13 +43,21 @@ router.post('/login', async (req, res) => {
     console.log('user not found');
   } else {
     if (current_user.password === user_records[0].password) {
-      res.json('you are a verified user');
+      const usern = await usercreds.find({ email: current_user.email }, 'email');
+      const username = usern[0].email;
+
+      res.json(username);
       console.log('verified user looged in');
     } else {
       res.json('wrong credential');
       console.log('unverified user');
     }
   }
+});
+router.post('/user', async (req, res) => {
+  const useremail = req.body;
+  const userinfo = await usercreds.find({ email: useremail.data }, 'name');
+  res.json(userinfo[0].name);
 });
 
 // for (var i = 0; i < user_no; i++) {
@@ -58,4 +66,4 @@ router.post('/login', async (req, res) => {
 //     res.json('you are a verified user');
 //   } else {
 //     res.json('you are an imposter');
-//   } //!!do not ever code like this!! prior bad code example
+//   } //!!do not ever code like this!! you dumb
