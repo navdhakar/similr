@@ -2,11 +2,9 @@
 
 body {
   /* Rectangle 1 */
-
   position: absolute;
   width: 100%;
   height: 100%;
-
   background: #dbd9d9;
   overflow: hidden;
 }

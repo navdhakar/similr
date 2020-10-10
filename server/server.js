@@ -22,6 +22,7 @@ router.post('/signup', async (req, res) => {
   const new_user_creds = await usercreds.insert(req.body);
   // const dat = await userdata.find();
   // console.log(dat);
+  console.log(`${req.body.name} is added to database`);
   res.json('you are registered successfully');
 });
 // function verifyuser(pass){
@@ -32,7 +33,7 @@ router.post('/signup', async (req, res) => {
 //     } else {
 //       continue;
 //     }
-// }
+// }//bad thinking
 router.post('/login', async (req, res) => {
   const current_user = req.body;
 
